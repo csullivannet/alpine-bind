@@ -13,7 +13,7 @@ GROUP="named"
 COMMAND_OPTIONS_DEFAULT="-f"
 NAMED_UID_DEFAULT="1000"
 NAMED_GID_DEFAULT="101"
-COMMAND="/usr/sbin/named -u ${USER} -c /etc/bind/named.conf ${COMMAND_OPTIONS:=${COMMAND_OPTIONS_DEFAULT}}"
+COMMAND="/usr/sbin/named -u ${USER} -c /etc/bind/named.conf ${COMMAND_OPTIONS:=${COMMAND_OPTIONS_DEFAULT}} -g"
 
 NAMED_UID_ACTUAL=$(id -u ${USER})
 NAMED_GID_ACTUAL=$(id -g ${GROUP})
